@@ -324,11 +324,11 @@ cgicc::Cgicc::findEntries(const std::string& param,
   result.clear();
 
   if(byName) {
-    copy_if(fFormData.begin(), fFormData.end(), 
+    cgicc::copy_if(fFormData.begin(), fFormData.end(), 
 	    std::back_inserter(result),FE_nameCompare(param));
   }
   else {
-    copy_if(fFormData.begin(), fFormData.end(), 
+    cgicc::copy_if(fFormData.begin(), fFormData.end(), 
 	    std::back_inserter(result), FE_valueCompare(param));
   }
 
